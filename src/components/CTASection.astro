@@ -1,0 +1,33 @@
+---
+interface Props {
+  t: any;
+  lang: string;
+}
+
+const { t, lang } = Astro.props;
+const contactHref = lang === 'en' ? '/en/contact' : '/contact';
+const servicesHref = lang === 'en' ? '/en/services' : '/services';
+---
+
+<section class="py-16 relative overflow-hidden border-y border-signal-cyan/20">
+  <div class="absolute inset-0 bg-gradient-to-br from-black-iron to-forge-gray"></div>
+  <div class="absolute inset-0 bg-radial-gradient opacity-10"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-3xl mx-auto text-center py-12">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-signal-cyan bg-clip-text text-transparent" style="font-family: var(--font-heading);">
+        {t.title}
+      </h2>
+      <p class="text-xl text-data-silver mb-10 leading-relaxed">{t.description}</p>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={contactHref} class="px-8 py-4 bg-signal-cyan text-black-iron font-semibold rounded-lg hover:bg-cyan-300 transition-all hover:-translate-y-1" style="font-family: var(--font-subheading);">
+          {t.btnContact}
+        </a>
+        <a href={servicesHref} class="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-signal-cyan hover:bg-signal-cyan hover:text-black-iron transition-all hover:-translate-y-1" style="font-family: var(--font-subheading);">
+          {t.btnServices}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

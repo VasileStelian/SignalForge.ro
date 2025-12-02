@@ -1,0 +1,27 @@
+[
+  {
+    "step": 1,
+    "title": "Discovery",
+    "description": "We analyze your needs, understand your workflows, and identify opportunities for automation and improvement."
+  },
+  {
+    "step": 2,
+    "title": "Architecture",
+    "description": "We design the technical solution, map integrations, and plan the implementation strategy."
+  },
+  {
+    "step": 3,
+    "title": "Forge",
+    "description": "We build your system with clean code, security in mind, and scalability built in from the start."
+  },
+  {
+    "step": 4,
+    "title": "Deploy",
+    "description": "We launch your solution, ensure everything works as expected, and train your team."
+  },
+  {
+    "step": 5,
+    "title": "Support",
+    "description": "We monitor, maintain, and evolve your systems to ensure they continue to deliver value."
+  }
+]

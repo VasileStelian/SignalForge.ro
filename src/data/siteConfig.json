@@ -1,0 +1,14 @@
+{
+  "siteTitle": "SignalForge",
+  "siteTagline": "Intelligence. Engineered.",
+  "siteDescription": "SignalForge builds and implements AI systems, automation solutions, and security-oriented infrastructure for businesses. We transform raw signals into intelligent systems that automate work and secure operations.",
+  "domain": "signalforge.ro",
+  "primaryEmail": "contact@signalforge.ro",
+  "location": "Bacău, Romania",
+  "navLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

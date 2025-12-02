@@ -1,0 +1,41 @@
+---
+interface Props {
+  t: any;
+}
+
+const { t } = Astro.props;
+---
+
+<section class="py-24">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center" style="font-family: var(--font-heading);">{t.title}</h2>
+
+      <div class="space-y-6 mb-16 text-lg text-data-silver leading-relaxed">
+        <p>{t.p1}</p>
+        <p>{t.p2}</p>
+        <p>{t.p3}</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="text-5xl mb-4 opacity-80">🧠</div>
+          <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-subheading);">{t.pillars.intelligence.title}</h3>
+          <p class="text-data-silver">{t.pillars.intelligence.description}</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="text-5xl mb-4 opacity-80">⚡</div>
+          <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-subheading);">{t.pillars.reliability.title}</h3>
+          <p class="text-data-silver">{t.pillars.reliability.description}</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="text-5xl mb-4 opacity-80">🔒</div>
+          <h3 class="text-xl font-semibold mb-3" style="font-family: var(--font-subheading);">{t.pillars.security.title}</h3>
+          <p class="text-data-silver">{t.pillars.security.description}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

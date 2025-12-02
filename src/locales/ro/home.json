@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Inteligență. Proiectată.",
+    "subtitle": "Transformăm semnale brute—date, evenimente, conversații—în sisteme inteligente care automatizează munca și securizează operațiunile.",
+    "ctaPrimary": "Solicită o consultație",
+    "ctaSecondary": "Vezi ce construim"
+  },
+  "services": {
+    "title": "Ce Construim",
+    "description": "De la automatizări inteligente la infrastructură securizată, livrăm sisteme care funcționează."
+  },
+  "process": {
+    "title": "Cum Lucrăm",
+    "description": "Procesul nostru dovedit asigură că fiecare proiect este livrat cu precizie, securitate și scalabilitate."
+  },
+  "about": {
+    "title": "De Ce SignalForge?",
+    "p1": "Majoritatea afacerilor se îneacă în semnale—conversații cu clienți, loguri de evenimente, fluxuri de date, alerte de securitate—dar se luptă să le transforme în informații acționabile.",
+    "p2": "Nu alergăm după buzzwords. Construim sisteme funcționale. Fiecare chatbot, automatizare și implementare de securitate pe care o livrăm este proiectată pentru operare reală—testată, întărită și construită pentru scalare.",
+    "p3": "Abordarea noastră combină expertiză tehnică profundă în AI, automatizare și securitate cibernetică cu un focus pe rezultate practice.",
+    "pillars": {
+      "intelligence": {
+        "title": "Inteligență",
+        "description": "Sisteme AI care înțeleg contextul, învață din interacțiuni și oferă automatizare semnificativă."
+      },
+      "reliability": {
+        "title": "Fiabilitate",
+        "description": "Implementări de nivel producție cu monitorizare adecvată, gestionare a erorilor și scalabilitate."
+      },
+      "security": {
+        "title": "Securitate",
+        "description": "Infrastructură securizată din prima zi. Securitatea ca cerință de bază, nu ca un gând ulterior."
+      }
+    }
+  },
+  "cta": {
+    "title": "Gata Să Construim Următorul Sistem?",
+    "description": "Să discutăm cum AI, automatizarea și securitatea pot transforma operațiunile tale.",
+    "btnContact": "Contactează-ne",
+    "btnServices": "Vezi Serviciile"
+  }
+}

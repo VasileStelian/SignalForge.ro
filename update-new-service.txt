@@ -1,0 +1,82 @@
+You are Claude, an expert Astro developer with 10+ years of experience. Your task is to UPDATE the existing SignalForge Astro project by adding a NEW SERVICE called “Website Development & Managed Hosting”.
+
+────────────────────────────────
+1. GOAL
+────────────────────────────────
+Add a new fourth service to the existing services system.  
+Service name (RO default): **Dezvoltare Website & Hosting Administrat**  
+English name: **Website Development & Managed Hosting**
+
+This service must:
+- appear in `services.json` (RO & EN versions)
+- appear on homepage inside ServicesSection
+- appear on /services and /en/services
+- use same formatting & Tailwind utility classes as other cards
+- be fully included in i18n translation files
+
+────────────────────────────────
+2. NECESAR
+────────────────────────────────
+Claude must update or create:
+
+1. `src/locales/ro/services.json`
+2. `src/locales/en/services.json`
+3. `src/data/services.json` (if used)
+4. Update ServicesSection.astro rendering logic to support N services instead of 3 fixed ones.
+5. Update homepage & services pages to include the new service automatically.
+6. Translate all RO <-> EN correctly.
+7. Maintain Tailwind styling.
+8. Maintain SEO and component modularity.
+
+────────────────────────────────
+3. TEXT SUGERAT PENTRU NOUL SERVICIU
+────────────────────────────────
+Romanian (default):
+Title: Dezvoltare Website & Hosting Administrat  
+ShortDesc: Creăm website-uri moderne, rapide și optimizate SEO, cu găzduire administrată și suport complet.  
+LongDesc: Oferim dezvoltare completă de website-uri folosind tehnologii moderne (Astro, Tailwind, Node), inclusiv implementare design, optimizare SEO, configurare hosting, security hardening, management DNS, certificate SSL și mentenanță continuă. Ne ocupăm de TOT, astfel încât afacerea ta să poată funcționa fără bătăi de cap.  
+Bullets:
+- Website modern, rapid și optimizat
+- Hosting administrat complet
+- Configurare DNS + SSL
+- Update-uri și mentenanță
+- Optimizare SEO
+- Securitate și backup-uri
+
+English:
+Title: Website Development & Managed Hosting  
+ShortDesc: We build modern, fast, SEO-optimized websites with fully managed hosting and long-term support.  
+LongDesc: We provide full‑stack website development using modern technologies (Astro, Tailwind, Node), including design implementation, SEO optimization, hosting configuration, security hardening, DNS setup, SSL certificates, and continuous maintenance. We handle EVERYTHING so your business runs smoothly.  
+Bullets:
+- Modern, fast, optimized website
+- Fully managed hosting
+- DNS + SSL configuration
+- Maintenance & updates
+- SEO optimization
+- Security & backups
+
+────────────────────────────────
+4. RULES
+────────────────────────────────
+- DO NOT rewrite components unnecessarily.
+- DO NOT break Tailwind system.
+- DO NOT duplicate code.
+- Components must auto-render based on services.json.
+- Use same JSON structure and schema as existing services.
+- Keep output compact, no long placeholders.
+- Maintain i18n conventions: / for RO, /en for EN.
+
+────────────────────────────────
+5. FINAL OUTPUT REQUESTED
+────────────────────────────────
+Provide:
+- updated services.json (RO & EN)
+- updated i18n service translation files
+- updated ServiceSection.astro (auto-loop)
+- updated /services & /en/services pages
+- any required import changes
+- diff or full file output in compact form
+- no outside-text (everything inside code blocks)
+
+────────────────────────────────
+Now generate all updated files.

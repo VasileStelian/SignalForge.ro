@@ -1,0 +1,20 @@
+{
+  "pageTitle": "Contactează-ne",
+  "pageDescription": "Gata să construim sisteme inteligente care livrează valoare reală? Să pornim o conversație.",
+  "title": "Să Construim Ceva Împreună",
+  "description": "Gata să transformi operațiunile cu sisteme inteligente? Contactează-ne și să discutăm despre proiectul tău.",
+  "email": "Email",
+  "location": "Locație",
+  "form": {
+    "name": "Nume",
+    "nameRequired": "Nume *",
+    "namePlaceholder": "Numele tău",
+    "email": "Email *",
+    "emailPlaceholder": "adresa@email.ro",
+    "company": "Companie",
+    "companyPlaceholder": "Compania ta (opțional)",
+    "message": "Mesaj *",
+    "messagePlaceholder": "Spune-ne despre proiectul tău...",
+    "submit": "Trimite Mesaj"
+  }
+}

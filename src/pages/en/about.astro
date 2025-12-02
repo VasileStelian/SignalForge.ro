@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import CTASection from '../../components/CTASection.astro';
+import { getLangFromParams, loadTranslations } from '../../utils/i18n.js';
+
+const lang = getLangFromParams(Astro);
+const t = await loadTranslations(lang, 'about');
+const homeT = await loadTranslations(lang, 'home');
+const pageUrl = `https://signalforge.ro/en/about`;
+---
+
+<BaseLayout title={t.pageTitle} description={t.pageDescription} pageUrl={pageUrl} lang={lang} common={t.common}>
+  <PageIntro title={t.pageTitle} description={t.pageDescription} />
+
+  <section class="py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto space-y-24">
+        <article class="pb-24 border-b border-white/10">
+          <h2 class="text-4xl font-bold mb-8" style="font-family: var(--font-heading);">{t.mission.title}</h2>
+          <div class="space-y-6 text-lg text-data-silver leading-relaxed">
+            <p>{t.mission.p1}</p>
+            <p>{t.mission.p2}</p>
+            <p>{t.mission.p3}</p>
+          </div>
+        </article>
+
+        <article class="pb-24 border-b border-white/10">
+          <h2 class="text-4xl font-bold mb-8" style="font-family: var(--font-heading);">{t.approach.title}</h2>
+          <div class="space-y-6 text-lg text-data-silver leading-relaxed mb-12">
+            <p>{t.approach.p1}</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-forge-gray p-8 rounded-xl border border-white/5">
+              <h3 class="text-xl font-semibold text-signal-cyan mb-4" style="font-family: var(--font-subheading);">{t.approach.ai.title}</h3>
+              <p class="text-data-silver leading-relaxed">{t.approach.ai.description}</p>
+            </div>
+
+            <div class="bg-forge-gray p-8 rounded-xl border border-white/5">
+              <h3 class="text-xl font-semibold text-signal-cyan mb-4" style="font-family: var(--font-subheading);">{t.approach.automation.title}</h3>
+              <p class="text-data-silver leading-relaxed">{t.approach.automation.description}</p>
+            </div>
+
+            <div class="bg-forge-gray p-8 rounded-xl border border-white/5">
+              <h3 class="text-xl font-semibold text-signal-cyan mb-4" style="font-family: var(--font-subheading);">{t.approach.security.title}</h3>
+              <p class="text-data-silver leading-relaxed">{t.approach.security.description}</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h2 class="text-4xl font-bold mb-8" style="font-family: var(--font-heading);">{t.whoWeHelp.title}</h2>
+          <div class="space-y-6 text-lg text-data-silver leading-relaxed mb-8">
+            <p>{t.whoWeHelp.p1}</p>
+          </div>
+
+          <ul class="space-y-6">
+            <li class="text-lg text-data-silver pl-8 relative leading-relaxed">
+              <span class="absolute left-0 text-signal-cyan font-bold text-2xl">→</span>
+              <strong class="text-white font-semibold">{t.whoWeHelp.smb}</strong> {t.whoWeHelp.smbDesc}
+            </li>
+            <li class="text-lg text-data-silver pl-8 relative leading-relaxed">
+              <span class="absolute left-0 text-signal-cyan font-bold text-2xl">→</span>
+              <strong class="text-white font-semibold">{t.whoWeHelp.tech}</strong> {t.whoWeHelp.techDesc}
+            </li>
+            <li class="text-lg text-data-silver pl-8 relative leading-relaxed">
+              <span class="absolute left-0 text-signal-cyan font-bold text-2xl">→</span>
+              <strong class="text-white font-semibold">{t.whoWeHelp.it}</strong> {t.whoWeHelp.itDesc}
+            </li>
+            <li class="text-lg text-data-silver pl-8 relative leading-relaxed">
+              <span class="absolute left-0 text-signal-cyan font-bold text-2xl">→</span>
+              <strong class="text-white font-semibold">{t.whoWeHelp.compliance}</strong> {t.whoWeHelp.complianceDesc}
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CTASection t={homeT.cta} lang={lang} />
+</BaseLayout>

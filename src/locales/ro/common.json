@@ -1,0 +1,16 @@
+{
+  "siteTitle": "SignalForge",
+  "siteTagline": "Inteligență. Proiectată.",
+  "siteDescription": "SignalForge construiește și implementează sisteme AI, soluții de automatizare și infrastructură orientată spre securitate pentru afaceri. Transformăm semnale brute în sisteme inteligente care automatizează munca și securizează operațiunile.",
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "about": "Despre",
+    "contact": "Contact"
+  },
+  "footer": {
+    "navigation": "Navigare",
+    "contactTitle": "Contact",
+    "rights": "Toate drepturile rezervate."
+  }
+}

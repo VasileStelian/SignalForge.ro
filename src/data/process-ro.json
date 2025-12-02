@@ -1,0 +1,27 @@
+[
+  {
+    "step": 1,
+    "title": "Descoperire",
+    "description": "Analizăm nevoile tale, înțelegem fluxurile de lucru și identificăm oportunități de automatizare și îmbunătățire."
+  },
+  {
+    "step": 2,
+    "title": "Arhitectură",
+    "description": "Proiectăm soluția tehnică, mapăm integrările și planificăm strategia de implementare."
+  },
+  {
+    "step": 3,
+    "title": "Construire",
+    "description": "Construim sistemul tău cu cod curat, securitate în minte și scalabilitate încorporată de la început."
+  },
+  {
+    "step": 4,
+    "title": "Lansare",
+    "description": "Lansăm soluția ta, ne asigurăm că totul funcționează conform așteptărilor și instruim echipa ta."
+  },
+  {
+    "step": 5,
+    "title": "Suport",
+    "description": "Monitorizăm, menținem și evoluăm sistemele tale pentru a ne asigura că continuă să livreze valoare."
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "pageTitle": "About SignalForge",
+  "pageDescription": "We're engineers who build production-grade AI systems, automation solutions, and secure infrastructure.",
+  "mission": {
+    "title": "Our Mission",
+    "p1": "Most organizations generate massive amounts of data but struggle to transform these raw signals into actionable intelligence.",
+    "p2": "SignalForge exists to solve this problem. We build systems that turn noise into clarity: AI chatbots, workflow automations, and security infrastructure.",
+    "p3": "Our mission is simple: deliver working systems that create measurable business value. No buzzwords, no over-promises—just solid engineering."
+  },
+  "approach": {
+    "title": "Our Approach",
+    "p1": "We're technical practitioners first. Every solution is built with production deployment in mind—proper error handling, monitoring, security hardening.",
+    "ai": {
+      "title": "AI & Machine Learning",
+      "description": "Intelligent systems that understand natural language, learn from interactions, and make autonomous decisions."
+    },
+    "automation": {
+      "title": "Automation Engineering",
+      "description": "Workflow automations that connect your tools, eliminate manual processes, and ensure seamless data flow."
+    },
+    "security": {
+      "title": "Security & Infrastructure",
+      "description": "Hardened systems, monitoring implementation, and defensive infrastructure that detects and responds to threats."
+    }
+  },
+  "whoWeHelp": {
+    "title": "Who We Help",
+    "p1": "We work with businesses that understand the strategic value of technology and want to build competitive advantages.",
+    "smb": "SMBs and Growing Companies",
+    "smbDesc": "looking to scale operations through smart automation.",
+    "tech": "Tech Companies",
+    "techDesc": "that need specialized AI capabilities or security hardening.",
+    "it": "Internal IT Teams",
+    "itDesc": "seeking expertise in implementing advanced automation or SOC capabilities.",
+    "compliance": "Organizations with Compliance Requirements",
+    "complianceDesc": "that need security-first implementations."
+  }
+}

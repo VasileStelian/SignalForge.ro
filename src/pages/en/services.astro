@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import CTASection from '../../components/CTASection.astro';
+import servicesEn from '../../data/services-en.json';
+import { getLangFromParams, loadTranslations } from '../../utils/i18n.js';
+
+const lang = getLangFromParams(Astro);
+const t = loadTranslations(lang, 'services');
+const homeT = loadTranslations(lang, 'home');
+const pageUrl = `https://signalforge.ro/en/services`;
+const services = servicesEn;
+---
+
+<BaseLayout title={t.pageTitle} description={t.pageDescription} pageUrl={pageUrl} lang={lang} common={t.common}>
+  <PageIntro title={t.pageTitle} description={t.pageDescription} />
+
+  <section class="py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto space-y-24">
+        {services.map((service) => (
+          <article id={service.slug} class="scroll-mt-24 pb-24 border-b border-white/10 last:border-0 last:pb-0">
+            <div class="mb-8">
+              <div class="inline-block px-4 py-1.5 bg-signal-cyan/10 text-signal-cyan text-xs font-semibold uppercase tracking-wider rounded mb-6" style="font-family: var(--font-subheading);">
+                {service.category}
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-family: var(--font-heading);">{service.title}</h2>
+              <p class="text-xl text-data-silver leading-relaxed">{service.longDescription}</p>
+            </div>
+
+            <div class="bg-forge-gray p-8 rounded-xl border border-white/5">
+              <h3 class="text-xl font-semibold mb-6" style="font-family: var(--font-subheading);">{t.whatsIncluded}</h3>
+              <ul class="grid gap-4">
+                {service.bullets.map((bullet) => (
+                  <li class="text-data-silver pl-8 relative leading-relaxed">
+                    <span class="absolute left-0 text-signal-cyan font-bold text-xl">✓</span>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection t={homeT.cta} lang={lang} />
+</BaseLayout>

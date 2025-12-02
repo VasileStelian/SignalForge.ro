@@ -1,0 +1,40 @@
+---
+import processRo from '../data/process-ro.json';
+import processEn from '../data/process-en.json';
+
+interface Props {
+  t: any;
+  lang: string;
+}
+
+const { t, lang } = Astro.props;
+const processSteps = lang === 'en' ? processEn : processRo;
+---
+
+<section class="py-24 bg-forge-gray border-y border-white/5">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6" style="font-family: var(--font-heading);">{t.title}</h2>
+      <p class="text-lg text-data-silver">{t.description}</p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row lg:justify-between max-w-6xl mx-auto gap-8 lg:gap-0">
+      {processSteps.map((step, index) => (
+        <div class="flex flex-col lg:flex-1 lg:text-center relative">
+          <div class="flex lg:flex-col items-start lg:items-center gap-4 lg:gap-0">
+            <div class="w-15 h-15 flex items-center justify-center text-2xl font-bold bg-gradient-to-br from-signal-cyan to-forge-orange text-black-iron rounded-full shrink-0 z-10" style="font-family: var(--font-heading);">
+              {step.step}
+            </div>
+            <div class="lg:mt-4">
+              <h3 class="text-2xl font-bold mb-2" style="font-family: var(--font-subheading);">{step.title}</h3>
+              <p class="text-data-silver leading-relaxed mx-1">{step.description}</p>
+            </div>
+          </div>
+          {index < processSteps.length - 1 && (
+            <div class="hidden lg:block absolute left-[calc(50%+30px)] top-7 w-[calc(100%-60px)] h-0.5 bg-gradient-to-r from-signal-cyan/50 to-transparent"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

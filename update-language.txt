@@ -1,0 +1,192 @@
+You are Claude, an expert Astro developer with 10+ years of experience. Your task is to UPDATE the existing SignalForge Astro project and add full multi-language support (i18n).
+
+IMPORTANT:
+- The DEFAULT language must be **Romanian (RO)** at route `/`
+- The ENGLISH version must be served under `/en`
+- Do NOT use `/ro`
+- DO NOT rewrite or break existing components unless needed
+- DO NOT duplicate CSS or create bloat
+- Use the existing Tailwind setup
+- Handle translations through JSON locale files only
+- Keep everything modular, clean, and scalable
+
+
+────────────────────────────────
+1. PROJECT GOAL
+────────────────────────────────
+
+Transform the existing Astro website into a multi-language site using:
+- route-based i18n
+- JSON translation files
+- shared components receiving translated text via props
+
+Structure:
+- Romanian = root version (`/`)
+- English = `/en`
+
+The system must allow adding German, French, etc. later.
+
+
+────────────────────────────────
+2. DIRECTORY STRUCTURE TO ADD
+────────────────────────────────
+
+Create:
+`src/locales/en/*.json`
+`src/locales/ro/*.json`
+
+At minimum:
+
+- `src/locales/en/common.json`
+- `src/locales/en/home.json`
+- `src/locales/en/services.json`
+- `src/locales/en/about.json`
+- `src/locales/en/contact.json`
+
+- `src/locales/ro/common.json`
+- `src/locales/ro/home.json`
+- `src/locales/ro/services.json`
+- `src/locales/ro/about.json`
+- `src/locales/ro/contact.json`
+
+Populate Romanian JSON with Romanian text.
+Translate English JSON from the content already existing in the project.
+
+
+────────────────────────────────
+3. LANGUAGE LOADER UTILITY
+────────────────────────────────
+
+Create a utility file:
+
+`src/utils/i18n.js`
+
+Implement three exported functions:
+
+1. `getLangFromParams(Astro)`
+   - If Astro.params.lang exists → return that
+   - Else → return `"ro"`
+
+2. `loadTranslations(lang, page)`
+   - loads correct JSON blocks for both "common" and the page-specific file
+
+3. `t(keyPath)`
+   - a helper to safely access translation keys by `"home.title"` etc.
+
+
+────────────────────────────────
+4. ROUTING RULES
+────────────────────────────────
+
+Modify routing so that:
+
+Romanian root:
+`src/pages/index.astro` → loads RO translation files (no params)
+
+English version:
+`src/pages/en/index.astro` → loads EN translations (param = "en")
+
+Other pages follow same logic:
+
+RO:
+- `/services`
+- `/about`
+- `/contact`
+
+EN:
+- `/en/services`
+- `/en/about`
+- `/en/contact`
+
+
+────────────────────────────────
+5. HOW PAGES SHOULD LOAD TRANSLATIONS
+────────────────────────────────
+
+In each page file, do something like:
+
+```astro
+---
+import { getLangFromParams, loadTranslations } from "../../utils/i18n.js";
+
+const lang = getLangFromParams(Astro);
+const t = await loadTranslations(lang, "home"); // for that page
+---
+Then components receive only required translation subsets:
+<HeroSection t={t.hero} />
+<ServicesSection t={t.services} />
+<CTASection t={t.cta} />
+
+────────────────────────────────
+6. UPDATE LAYOUT (BaseLayout.astro)
+────────────────────────────────
+
+Modify <head>:
+	•	dynamically set <html lang="ro"> or "en"
+	•	dynamic <title> and <meta name="description"> using content from translations’ common.json
+
+Add a LANGUAGE SWITCHER in the header:
+	•	Simple text links
+	•	Tailwind minimal styles
+	•	Logic:
+	•	If current page is RO → show: RO / EN
+	•	If current page is EN → show: RO / EN
+	•	RO links go to root pages
+	•	EN links go to /en/... equivalents
+
+────────────────────────────────
+7. UPDATE Header.astro
+────────────────────────────────
+
+Inside the navigation on the right, add:
+
+<!-- Language Switcher -->
+<div class="flex items-center gap-2 text-dataSilver text-sm">
+  <a href="/" class="hover:text-signalCyan">RO</a>
+  <span>/</span>
+  <a href="/en" class="hover:text-signalCyan">EN</a>
+</div>
+Keep existing nav links intact.
+
+────────────────────────────────
+8. TRANSLATION CONTENT
+────────────────────────────────
+
+For Romanian:
+	•	Translate all titles, subtitles, section headings, CTAs, paragraphs.
+	•	Keep the tone professional, technical, consistent with the brand.
+
+For English:
+	•	Use existing English text from the project.
+
+────────────────────────────────
+9. DO NOT DO:
+────────────────────────────────
+	•	Do NOT duplicate components
+	•	Do NOT rewrite Tailwind system
+	•	Do NOT create a separate layout per language
+	•	Do NOT generate long placeholder text
+	•	Do NOT hardcode English or Romanian inside components
+	•	Do NOT break SEO metadata
+
+────────────────────────────────
+10. FINAL OUTPUT REQUIRED
+────────────────────────────────
+
+Claude, produce a full diff-style patch or a complete file output list, containing:
+	•	new locale files for RO and EN
+	•	updated pages (index.astro, services.astro, about.astro, contact.astro)
+	•	new /en pages
+	•	updated Header.astro, BaseLayout.astro
+	•	new i18n.js utility
+	•	any updates to imports/paths
+	•	instructions for how the user should apply the generated changes
+
+Use compact code blocks, Tailwind classes, and do not generate verbose text.
+
+The final result must be ready-to-run in my existing Astro project.
+
+────────────────────────────────
+
+Now generate all necessary updated files and additions for the project.
+

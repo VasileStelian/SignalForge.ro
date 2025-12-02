@@ -1,0 +1,16 @@
+{
+  "siteTitle": "SignalForge",
+  "siteTagline": "Intelligence. Engineered.",
+  "siteDescription": "SignalForge builds and implements AI systems, automation solutions, and security-oriented infrastructure for businesses. We transform raw signals into intelligent systems that automate work and secure operations.",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved."
+  }
+}

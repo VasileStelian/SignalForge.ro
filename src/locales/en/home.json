@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Intelligence. Engineered.",
+    "subtitle": "We transform raw signals—data, events, conversations—into intelligent systems that automate work and secure operations.",
+    "ctaPrimary": "Request a consultation",
+    "ctaSecondary": "See what we build"
+  },
+  "services": {
+    "title": "What We Build",
+    "description": "From intelligent automations to hardened infrastructure, we deliver systems that work."
+  },
+  "process": {
+    "title": "How We Work",
+    "description": "Our proven process ensures every project is delivered with precision, security, and scalability."
+  },
+  "about": {
+    "title": "Why SignalForge?",
+    "p1": "Most businesses are drowning in signals—customer conversations, event logs, data streams, security alerts—but struggle to turn them into actionable intelligence.",
+    "p2": "We don't chase buzzwords. We build working systems. Every chatbot, automation, and security implementation we deliver is designed for real-world operation—tested, hardened, and built to scale.",
+    "p3": "Our approach combines deep technical expertise in AI, automation, and cybersecurity with a focus on practical outcomes.",
+    "pillars": {
+      "intelligence": {
+        "title": "Intelligence",
+        "description": "AI systems that understand context, learn from interactions, and deliver meaningful automation."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Production-grade implementations with proper monitoring, error handling, and scalability."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Infrastructure hardened from day one. Security as a core requirement, not an afterthought."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Forge Your Next System?",
+    "description": "Let's discuss how AI, automation, and security can transform your operations.",
+    "btnContact": "Contact Us",
+    "btnServices": "View Services"
+  }
+}

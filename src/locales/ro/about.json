@@ -1,0 +1,38 @@
+{
+  "pageTitle": "Despre SignalForge",
+  "pageDescription": "Suntem ingineri care construiesc sisteme AI de nivel producție, soluții de automatizare și infrastructură securizată.",
+  "mission": {
+    "title": "Misiunea Noastră",
+    "p1": "Majoritatea organizațiilor generează cantități masive de date, dar se luptă să transforme aceste semnale brute în informații acționabile.",
+    "p2": "SignalForge există pentru a rezolva această problemă. Construim sisteme care transformă zgomotul în claritate: chatboți AI, automatizări de flux de lucru și infrastructură de securitate.",
+    "p3": "Misiunea noastră este simplă: să livrăm sisteme funcționale care creează valoare măsurabilă pentru afaceri. Fără buzzwords, fără promisiuni exagerate—doar inginerie solidă."
+  },
+  "approach": {
+    "title": "Abordarea Noastră",
+    "p1": "Suntem practicieni tehnici mai întâi. Fiecare soluție este construită cu implementarea în producție în minte—gestionare adecvată a erorilor, monitorizare, întărire a securității.",
+    "ai": {
+      "title": "AI & Machine Learning",
+      "description": "Sisteme inteligente care înțeleg limbajul natural, învață din interacțiuni și iau decizii autonome."
+    },
+    "automation": {
+      "title": "Inginerie de Automatizare",
+      "description": "Automatizări de flux de lucru care conectează instrumentele tale, elimină procesele manuale și asigură flux de date fără probleme."
+    },
+    "security": {
+      "title": "Securitate & Infrastructură",
+      "description": "Sisteme întărite, implementare de monitorizare și infrastructură defensivă care detectează și răspunde la amenințări."
+    }
+  },
+  "whoWeHelp": {
+    "title": "Pe Cine Ajutăm",
+    "p1": "Lucrăm cu afaceri care înțeleg valoarea strategică a tehnologiei și doresc să construiască avantaje competitive.",
+    "smb": "IMM-uri și Companii în Creștere",
+    "smbDesc": "care doresc să scaleze operațiunile prin automatizare inteligentă.",
+    "tech": "Companii Tech",
+    "techDesc": "care au nevoie de capabilități AI specializate sau întărire a securității.",
+    "it": "Echipe IT Interne",
+    "itDesc": "care caută expertiză în implementarea automatizării avansate sau capabilități SOC.",
+    "compliance": "Organizații cu Cerințe de Conformitate",
+    "complianceDesc": "care au nevoie de implementări axate pe securitate."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "pageTitle": "Contact Us",
+  "pageDescription": "Ready to build intelligent systems that deliver real value? Let's start a conversation.",
+  "title": "Let's Build Something Together",
+  "description": "Ready to transform your operations with intelligent systems? Get in touch and let's discuss your project.",
+  "email": "Email",
+  "location": "Location",
+  "form": {
+    "name": "Name",
+    "nameRequired": "Name *",
+    "namePlaceholder": "Your name",
+    "email": "Email *",
+    "emailPlaceholder": "your@email.com",
+    "company": "Company",
+    "companyPlaceholder": "Your company (optional)",
+    "message": "Message *",
+    "messagePlaceholder": "Tell us about your project...",
+    "submit": "Send Message"
+  }
+}

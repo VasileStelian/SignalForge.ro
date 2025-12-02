@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "ai-chatbots",
+    "title": "AI Chatbots & Automations",
+    "category": "AI",
+    "shortDescription": "Intelligent conversational AI for websites, WhatsApp, and customer support workflows.",
+    "longDescription": "Transform customer interactions with AI-powered chatbots that understand context, automate responses, and capture leads 24/7. Our custom AI solutions integrate seamlessly with your existing systems and adapt to your business needs.",
+    "bullets": [
+      "Website AI chatbots with custom knowledge bases",
+      "WhatsApp business assistants",
+      "AI-driven lead capture and qualification",
+      "Custom logic bots for FAQ, support, and sales flows",
+      "Integration with CRM and ticketing systems",
+      "Multi-language support and conversation analytics"
+    ]
+  },
+  {
+    "slug": "workflow-automation",
+    "title": "Business Workflow Automation",
+    "category": "Automation",
+    "shortDescription": "Streamline operations with intelligent automations that connect your tools and eliminate repetitive tasks.",
+    "longDescription": "Build efficiency into every process. We design and implement custom automation workflows that connect your CRM, email, calendars, and business tools—reducing manual work and eliminating errors.",
+    "bullets": [
+      "CRM, email, and calendar integrations",
+      "Scripted automations for repetitive tasks",
+      "Data pipelines and smart routing logic",
+      "Custom internal tools for operations efficiency",
+      "Document processing and data extraction",
+      "Automated reporting and notifications"
+    ]
+  },
+  {
+    "slug": "security-consulting",
+    "title": "Security & Infrastructure Consulting",
+    "category": "Security",
+    "shortDescription": "Protect your systems with hardened infrastructure, monitoring, and security automation.",
+    "longDescription": "Security isn't optional—it's foundational. We help you build resilient, secure infrastructure with proper monitoring, incident detection, and hardening for servers, networks, and applications.",
+    "bullets": [
+      "Server and network hardening",
+      "Wazuh and Suricata deployment and configuration",
+      "Security Operations Center (SOC) automation",
+      "Real-time monitoring and alerting systems",
+      "Security audits and best-practice recommendations",
+      "Incident response planning and implementation"
+    ]
+  }
+]

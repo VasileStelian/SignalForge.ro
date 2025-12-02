@@ -1,0 +1,42 @@
+---
+interface Props {
+  t: any;
+  lang: string;
+}
+
+const { t, lang } = Astro.props;
+const contactHref = lang === 'en' ? '/en/contact' : '/contact';
+const servicesHref = lang === 'en' ? '/en/services' : '/services';
+---
+
+<section class="relative min-h-[85vh] flex items-center overflow-hidden py-24">
+  <div class="absolute inset-0 bg-gradient-to-br from-black-iron via-[#0d0d10] to-black-iron"></div>
+  <div class="absolute inset-0 opacity-30" style="background-image: linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite;"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-signal-cyan bg-clip-text text-transparent leading-tight" style="font-family: var(--font-heading);">
+        {t.title}
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl text-data-silver mb-12 max-w-3xl mx-auto leading-relaxed">
+        {t.subtitle}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={contactHref} class="px-8 py-4 bg-signal-cyan text-black-iron font-semibold rounded-lg hover:bg-cyan-300 transition-all hover:-translate-y-1" style="font-family: var(--font-subheading);">
+          {t.ctaPrimary}
+        </a>
+        <a href={servicesHref} class="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-signal-cyan hover:bg-signal-cyan hover:text-black-iron transition-all hover:-translate-y-1" style="font-family: var(--font-subheading);">
+          {t.ctaSecondary}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+</style>

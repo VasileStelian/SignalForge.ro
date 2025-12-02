@@ -1,16 +1,27 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import ProcessSection from '../components/ProcessSection.astro';
+import AboutIntro from '../components/AboutIntro.astro';
+import CTASection from '../components/CTASection.astro';
+import { getLangFromParams, loadTranslations } from '../utils/i18n.js';
 
+const lang = getLangFromParams(Astro);
+const t = loadTranslations(lang, 'home');
+const pageUrl = `https://signalforge.ro`;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title={t.common.siteTagline}
+  description={t.common.siteDescription}
+  pageUrl={pageUrl}
+  lang={lang}
+  common={t.common}
+>
+  <HeroSection t={t.hero} lang={lang} />
+  <ServicesSection t={t.services} lang={lang} />
+  <ProcessSection t={t.process} lang={lang} />
+  <AboutIntro t={t.about} />
+  <CTASection t={t.cta} lang={lang} />
+</BaseLayout>

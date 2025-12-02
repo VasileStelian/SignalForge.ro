@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "website-development-managed-hosting",
+    "title": "Dezvoltare Website & Hosting Administrat",
+    "category": "Web Development",
+    "shortDescription": "Creăm website-uri moderne, rapide și optimizate SEO, cu găzduire administrată și suport complet.",
+    "longDescription": "Oferim dezvoltare completă de website-uri folosind tehnologii moderne (Astro, Tailwind, Node), inclusiv implementare design, optimizare SEO, configurare hosting, security hardening, management DNS, certificate SSL și mentenanță continuă. Ne ocupăm de TOT, astfel încât afacerea ta să poată funcționa fără bătăi de cap.",
+    "bullets": [
+      "Website modern, rapid și optimizat",
+      "Hosting administrat complet",
+      "Configurare DNS + SSL",
+      "Update-uri și mentenanță",
+      "Optimizare SEO",
+      "Securitate și backup-uri"
+    ]
+  },
+  {
+    "slug": "ai-chatbots",
+    "title": "Chatboți AI & Automatizări",
+    "category": "AI",
+    "shortDescription": "AI conversațional inteligent pentru site-uri web, WhatsApp și fluxuri de asistență clienți.",
+    "longDescription": "Transformă interacțiunile cu clienții cu chatboți alimentați de AI care înțeleg contextul, automatizează răspunsurile și capturează lead-uri 24/7. Soluțiile noastre AI personalizate se integrează perfect cu sistemele tale existente și se adaptează nevoilor afacerii tale.",
+    "bullets": [
+      "Chatboți AI pentru site-uri web cu baze de cunoștințe personalizate",
+      "Asistenți WhatsApp pentru afaceri",
+      "Capturare și calificare lead-uri condusă de AI",
+      "Boți cu logică personalizată pentru FAQ, suport și flux de vânzări",
+      "Integrare cu CRM și sisteme de ticketing",
+      "Suport multilingv și analiză conversații"
+    ]
+  },
+  {
+    "slug": "workflow-automation",
+    "title": "Automatizare Flux de Lucru pentru Afaceri",
+    "category": "Automatizare",
+    "shortDescription": "Eficientizează operațiunile cu automatizări inteligente care conectează instrumentele tale și elimină sarcinile repetitive.",
+    "longDescription": "Construiește eficiență în fiecare proces. Proiectăm și implementăm fluxuri de lucru automate personalizate care conectează CRM-ul, emailul, calendarele și instrumentele de afaceri—reducând munca manuală și eliminând erorile.",
+    "bullets": [
+      "Integrări CRM, email și calendar",
+      "Automatizări scriptate pentru sarcini repetitive",
+      "Pipeline-uri de date și logică de rutare inteligentă",
+      "Instrumente interne personalizate pentru eficiență operațională",
+      "Procesare documente și extracție date",
+      "Raportare automată și notificări"
+    ]
+  }
+]
