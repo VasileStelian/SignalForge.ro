@@ -9,6 +9,8 @@
     "name": "Name",
     "nameRequired": "Name *",
     "namePlaceholder": "Your name",
+    "phoneNumber": "Phone Number *",
+    "phoneNumberPlaceholder": "Your phone number",
     "email": "Email *",
     "emailPlaceholder": "your@email.com",
     "company": "Company",

@@ -9,6 +9,8 @@
     "name": "Nume",
     "nameRequired": "Nume *",
     "namePlaceholder": "Numele tău",
+    "phoneNumber": "Număr de Telefon *",
+    "phoneNumberPlaceholder": "Numărul tău de telefon",
     "email": "Email *",
     "emailPlaceholder": "adresa@email.ro",
     "company": "Companie",
