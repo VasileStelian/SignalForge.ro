@@ -5,7 +5,7 @@ import ServicesSection from '../components/ServicesSection.astro';
 import ProcessSection from '../components/ProcessSection.astro';
 import AboutIntro from '../components/AboutIntro.astro';
 import CTASection from '../components/CTASection.astro';
-import { getLangFromParams, loadTranslations } from '../utils/i18n.js';
+import { getLangFromParams, loadTranslations } from '../utils/i18n';
 
 const lang = getLangFromParams(Astro);
 const t = loadTranslations(lang, 'home');

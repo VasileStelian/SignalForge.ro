@@ -16,6 +16,27 @@ import servicesRo from '../locales/ro/services.json';
 import aboutRo from '../locales/ro/about.json';
 import contactRo from '../locales/ro/contact.json';
 
+// Type definitions
+export type Language = 'ro' | 'en';
+export type PageType = 'home' | 'services' | 'about' | 'contact';
+
+type CommonTranslations = typeof commonEn;
+type HomeTranslations = typeof homeEn;
+type ServicesTranslations = typeof servicesEn;
+type AboutTranslations = typeof aboutEn;
+type ContactTranslations = typeof contactEn;
+
+type PageTranslations = {
+  home: HomeTranslations;
+  services: ServicesTranslations;
+  about: AboutTranslations;
+  contact: ContactTranslations;
+};
+
+type TranslationsResult<T extends PageType> = {
+  common: CommonTranslations;
+} & PageTranslations[T];
+
 const translations = {
   en: {
     common: commonEn,
@@ -31,41 +52,36 @@ const translations = {
     about: aboutRo,
     contact: contactRo
   }
-};
+} as const;
 
 /**
  * Get language from URL pathname
- * @param {object} Astro - Astro global object
- * @returns {string} - Language code (ro or en)
  */
-export function getLangFromParams(Astro) {
+export function getLangFromParams(Astro: any): Language {
   return Astro.url.pathname.startsWith('/en') ? 'en' : 'ro';
 }
 
 /**
  * Load translations for a specific language and page
- * @param {string} lang - Language code
- * @param {string} page - Page name (home, services, about, contact)
- * @returns {object} - Combined translations object
  */
-export function loadTranslations(lang, page) {
+export function loadTranslations<T extends PageType>(
+  lang: Language,
+  page: T
+): TranslationsResult<T> {
   const langData = translations[lang] || translations['ro'];
 
   return {
     common: langData.common,
     ...langData[page]
-  };
+  } as TranslationsResult<T>;
 }
 
 /**
  * Get translation value by key path
- * @param {object} translations - Translations object
- * @param {string} keyPath - Dot notation key path (e.g., "hero.title")
- * @returns {string} - Translation value
  */
-export function t(translations, keyPath) {
+export function t(translations: any, keyPath: string): string {
   const keys = keyPath.split('.');
-  let value = translations;
+  let value: any = translations;
 
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
@@ -81,15 +97,26 @@ export function t(translations, keyPath) {
 
 /**
  * Get alternate language path
- * @param {string} currentLang - Current language
- * @param {string} currentPath - Current path without lang prefix
- * @returns {object} - Object with ro and en paths
  */
-export function getAlternatePaths(currentLang, currentPath) {
+export function getAlternatePaths(currentLang: Language, currentPath: string) {
   const basePath = currentPath.replace(/^\/en/, '');
 
   return {
     ro: basePath || '/',
     en: `/en${basePath || ''}`
   };
+}
+
+/**
+ * Get canonical page URL
+ */
+export function getPageUrl(lang: Language, path: string): string {
+  const baseDomain = 'https://signalforge.ro';
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+
+  if (lang === 'en') {
+    return `${baseDomain}/en${cleanPath}`;
+  }
+
+  return `${baseDomain}${cleanPath}`;
 }

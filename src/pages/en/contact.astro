@@ -2,10 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import ContactSection from '../../components/ContactSection.astro';
-import { getLangFromParams, loadTranslations } from '../../utils/i18n.js';
+import { getLangFromParams, loadTranslations } from '../../utils/i18n';
 
 const lang = getLangFromParams(Astro);
-const t = await loadTranslations(lang, 'contact');
+const t = loadTranslations(lang, 'contact');
 const pageUrl = `https://signalforge.ro/en/contact`;
 ---
 

@@ -2,11 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import CTASection from '../../components/CTASection.astro';
-import { getLangFromParams, loadTranslations } from '../../utils/i18n.js';
+import { getLangFromParams, loadTranslations } from '../../utils/i18n';
 
 const lang = getLangFromParams(Astro);
-const t = await loadTranslations(lang, 'about');
-const homeT = await loadTranslations(lang, 'home');
+const t = loadTranslations(lang, 'about');
+const homeT = loadTranslations(lang, 'home');
 const pageUrl = `https://signalforge.ro/en/about`;
 ---
 
